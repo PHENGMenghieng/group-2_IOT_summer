@@ -1,12 +1,6 @@
 # group-2_IOT_summer
 lab2
 
-<div align="center">
-
-# 🌐 IoT Webserver with LED, Sensors, and LCD Control
-### Course: IoT Architecture & Design | Lab Assignment 2
-**Group Number:** Group 2
-
 
 +-----------------------------------------------------------------------------+
 |                                 WEB BROWSER                                 |
@@ -39,6 +33,12 @@ lab2
     |  shuts down smoothly  |    |  Row 2: Pressed metrics|   | Ultrasound   |
     +-----------------------+    +-----------------------+    +--------------+
     
+<div align="center">
+
+# 🌐 IoT Webserver with LED, Sensors, and LCD Control
+### Course: IoT Architecture & Design | Lab Assignment 2
+**Group Number:** Group 2
+    
 
 <img width="555" height="802" alt="image" src="https://github.com/user-attachments/assets/c6925363-d2f2-44fb-b857-066a30cd8405" />
 <img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/19f98815-edd5-47f9-b4a6-b5b93b74d986" />
@@ -53,4 +53,6 @@ lab2
 Video:
 
 https://github.com/user-attachments/assets/4a1a300a-ad82-4e08-9299-b2b0b1f248ac
+-
+-
 https://github.com/user-attachments/assets/ec122e6a-3863-4454-b546-4e7ca9665279
