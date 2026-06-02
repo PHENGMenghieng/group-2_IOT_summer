@@ -1,5 +1,4 @@
-# group-2_IOT_summer
-lab2
+# group-2_IOT_summer {lab2}
 
     
 <div align="center">
@@ -7,7 +6,8 @@ lab2
 # 🌐 IoT Webserver with LED, Sensors and LCD control
 ### Course: IoT| Lab 2
 Group 2
-    
+
+    <div align="center">
        +-------------------------------------------------------+
        |                     WEB BROWSER                       |
        |  [LED Control]   [Text Broadcast]   [Sensor Ticker]   |
