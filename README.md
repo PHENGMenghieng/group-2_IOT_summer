@@ -3,7 +3,7 @@
     
 <div align="center">
 
-# 🌐 IoT Webserver with LED, Sensors and LCD control
+# IoT Webserver with LED, Sensors and LCD control
 ### Course: IoT| Lab 2
 Group 2
 
