@@ -1,44 +1,33 @@
 # group-2_IOT_summer
 lab2
 
-
-+-----------------------------------------------------------------------------+
-|                                 WEB BROWSER                                 |
-|                                                                             |
-|   +-----------------------+  +-------------------+  +-------------------+   |
-|   |   LED Control Panel   |  | Custom Message Box|  |  Telemetry Display|   |
-|   |  [LED ON]  [LED OFF]  |  | [               ] |  | Temp: -- C        |   |
-|   +-----------+-----------+  +---------+---------+  | Dist: -- cm       |   |
-+---------------|------------------------|------------+---------^-------------+
-                |                        |                      |
-    (HTTP GET /on or /off)        (HTTP GET /msg)        (AJAX /data Fetch)
-    Toggles LED instantly         Sends message text     Runs every 2 seconds
-                |                        |         (Never wipes your textbox!)
-                v                        v                      |
-+---------------------------------------------------------------|-------------+
-|                               ESP32 WEB SERVER                |             |
-|                                                               |             |
-|   +------------------------+  +--------------------------+  +-v----------+  |
-|   |    GPIO 2 (Output)     |  | Hardware Virtual Timer   |  | Sensor     |  |
-|   |   Controls Onboard     |  | Shifting text array rows |  | Subroutines|  |
-|   |       Blue LED         |  | at a perfect 1.5s pace   |  |            |  |
-+---+-----------+------------+--+------------+-------------+--+-----+------+--+
-                |                            |                      |
-          (Onboard Pin)               (SoftI2C Bus)         (GPIO 4 / 26 / 27)
-                |                            |                      |
-                v                            v                      v
-    +-----------------------+    +-----------------------+    +--------------+
-    |      PHYSICAL LED     |    |   I2C 16x2 LCD UNIT   |    | DHT11 Temp & |
-    |  Turns bright blue /  |    |  Row 1: Scrolling msg |    |   HC-SR04    |
-    |  shuts down smoothly  |    |  Row 2: Pressed metrics|   | Ultrasound   |
-    +-----------------------+    +-----------------------+    +--------------+
     
 <div align="center">
 
-# 🌐 IoT Webserver with LED, Sensors, and LCD Control
-### Course: IoT Architecture & Design | Lab Assignment 2
-**Group Number:** Group 2
+# 🌐 IoT Webserver with LED, Sensors and LCD control
+### Course: IoT| Lab 2
+Group 2
     
+       +-------------------------------------------------------+
+       |                     WEB BROWSER                       |
+       |  [LED Control]   [Text Broadcast]   [Sensor Ticker]   |
+       +-----------------------+-------------------------------+
+                               |
+                  Asynchronous HTTP AJAX Interface
+                               |
+                               v
+       +-------------------------------------------------------+
+       |                   ESP32 WEB SERVER                    |
+       |  (Background Hardware Virtual Interrupt Timer(0))      |
+       +-------+-----------------------+---------------+-------+
+               |                       |               |
+         Onboard Path               I2C Bus        GPIO Pins
+               |                       |               |
+               v                       v               v
+       +---------------+       +---------------+-------+-------+
+       | PHYSICAL LED  |       |  16x2 LCD     | Sensors:      |
+       | Status Light  |       |  Scrolling UI | DHT11/HC-SR04 |
+       +---------------+       +---------------+---------------+
 
 <img width="555" height="802" alt="image" src="https://github.com/user-attachments/assets/c6925363-d2f2-44fb-b857-066a30cd8405" />
 <img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/19f98815-edd5-47f9-b4a6-b5b93b74d986" />
